@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- test api Group -->
+    <route url="/V1/xcode/api/login" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="login"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/xcode/api/inquiry" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="inquiry"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/xcode/api/create_account" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="create_account"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/xcode/api/confirm_code" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="confirm_code"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/xcode/api/skip" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="skip"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/xcode/api/validate" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="validate"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/xcode/api/finalize" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="finalize"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/xcode/api/order_info" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="order_info"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/xcode/api/change_state" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="change_state"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+</routes>
