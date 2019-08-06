@@ -227,6 +227,28 @@ class ApiManagement implements \XCode\Api\Api\ApiManagementInterface
             return "{'code':'401','Message':'Unauthorized Access. Your ip address will be reported to site administrator'}";
     }
 
+    public function easy_check($session_data)
+    {
+
+            $model = $this->_ApiFactory
+                ->create();
+                
+            if (!$model->getId()) {
+                throw new \Magento\Framework\Exception\LocalizedException(
+                    __('no data found')
+                );
+            }   
+            $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+            $storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
+           
+            $store_address = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_WEB);
+            $origin_address = $_SERVER['REMOTE_ADDR'];
+            if (strpos($store_address,$origin_address)>0){
+                return $model->changeStateAction($session_data);
+            }
+            return "{'code':'401','Message':'Unauthorized Access. Your ip address will be reported to site administrator'}";
+    }
+
 
     public function objectToArray($d) {
         if (is_object($d)) {

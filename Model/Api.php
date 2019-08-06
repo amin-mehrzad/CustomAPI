@@ -4,7 +4,7 @@ namespace XCode\Api\Model;
 
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
-use \XCode\AgeVerificationCheckout\Helper\Data;
+use \XCode\Api\Helper\Data;
 use \Magento\Framework\App\Filesystem\DirectoryList;
 use \Magento\Framework\Stdlib\CookieManagerInterface;
 use \Magento\Framework\Controller\ResultFactory;
@@ -213,6 +213,7 @@ class Api implements \XCode\Api\Api\Data\ApiInterface
             curl_close($ch);
             return $result;
     }
+
     public function validateAction($session_data)
     {
         $key = $this->helper->ageverification_publicKey();
@@ -280,6 +281,26 @@ class Api implements \XCode\Api\Api\Data\ApiInterface
         $secretKey = $this->helper->ageverification_secretKey();
         $session_data["website_key"]= $key;
              $url = 'http://192.168.222.241/cya/public/api/changestate';
+            
+            $authorization = "Authorization: Bearer ".$secretKey;
+
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode($session_data));
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            $result = curl_exec($ch);
+            curl_close($ch);
+            return $result;
+    }
+
+    public function easyCheckAction($session_data)
+    {
+        $key = $this->helper->ageverification_publicKey();
+        $secretKey = $this->helper->ageverification_secretKey();
+        $session_data["website_key"]= $key;
+             $url = 'http://192.168.222.241/cya/public/api/easycheck';
             
             $authorization = "Authorization: Bearer ".$secretKey;
 

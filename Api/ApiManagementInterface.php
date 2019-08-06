@@ -94,4 +94,14 @@ interface ApiManagementInterface
     *
     * @return \XCode\Api\Api\Data\ApiInterface
     */
+    public function easy_check($session_data);
+    /**
+    * get test Api data.
+    *
+    * @api
+    *
+    * @param mixed $session_data
+    *
+    * @return \XCode\Api\Api\Data\ApiInterface
+    */
 }

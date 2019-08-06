@@ -57,5 +57,11 @@
             <resource ref="anonymous"/>
         </resources>
     </route>
+        <route url="/V1/xcode/api/easy_check" method="POST">
+        <service class="XCode\Api\Api\ApiManagementInterface" method="easy_check"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
 
 </routes>
