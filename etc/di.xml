@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-  <preference for="XCode\Api\Api\ApiManagementInterface" type="XCode\Api\Model\Api\ApiManagement" />
-    <preference for="XCode\Api\Api\Data\ApiInterface" type="XCode\Api\Model\Api" />
+  <preference for="ValidAge\Api\Api\ApiManagementInterface" type="ValidAge\Api\Model\Api\ApiManagement" />
+    <preference for="ValidAge\Api\Api\Data\ApiInterface" type="ValidAge\Api\Model\Api" />
 </config>

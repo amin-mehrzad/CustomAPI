@@ -1,6 +1,6 @@
 <?php
 
-namespace XCode\Api\Api;
+namespace ValidAge\Api\Api;
 
 interface ApiManagementInterface
 {
@@ -11,7 +11,7 @@ interface ApiManagementInterface
      *
      * @param mixed $session_data
      *
-     * @return \XCode\Api\Api\Data\ApiInterface
+     * @return \ValidAge\Api\Api\Data\ApiInterface
      */
     public function login($session_data);
 
@@ -22,7 +22,7 @@ interface ApiManagementInterface
      *
      * @param mixed $session_data
      *
-     * @return \XCode\Api\Api\Data\ApiInterface
+     * @return \ValidAge\Api\Api\Data\ApiInterface
      */
     public function inquiry($session_data);
     /**
@@ -32,7 +32,7 @@ interface ApiManagementInterface
      *
      * @param mixed $session_data
      *
-     * @return \XCode\Api\Api\Data\ApiInterface
+     * @return \ValidAge\Api\Api\Data\ApiInterface
      */
     public function create_account($session_data);
     /**
@@ -42,7 +42,7 @@ interface ApiManagementInterface
      *
      * @param mixed $session_data
      *
-     * @return \XCode\Api\Api\Data\ApiInterface
+     * @return \ValidAge\Api\Api\Data\ApiInterface
      */
     public function confirm_code($session_data);
     /**
@@ -52,7 +52,7 @@ interface ApiManagementInterface
      *
      * @param mixed $session_data
      *
-     * @return \XCode\Api\Api\Data\ApiInterface
+     * @return \ValidAge\Api\Api\Data\ApiInterface
      */
     public function skip($session_data);
     /**
@@ -62,7 +62,7 @@ interface ApiManagementInterface
      *
      * @param mixed $session_data
      *
-     * @return \XCode\Api\Api\Data\ApiInterface
+     * @return \ValidAge\Api\Api\Data\ApiInterface
      */
     public function validate($session_data);
     /**
@@ -72,7 +72,7 @@ interface ApiManagementInterface
      *
      * @param mixed $session_data
      *
-     * @return \XCode\Api\Api\Data\ApiInterface
+     * @return \ValidAge\Api\Api\Data\ApiInterface
      */
     public function order_info($session_data);
      /**
@@ -82,7 +82,7 @@ interface ApiManagementInterface
      *
      * @param mixed $session_data
      *
-     * @return \XCode\Api\Api\Data\ApiInterface
+     * @return \ValidAge\Api\Api\Data\ApiInterface
      */
     public function change_state($session_data);
     /**
@@ -92,7 +92,7 @@ interface ApiManagementInterface
     *
     * @param mixed $session_data
     *
-    * @return \XCode\Api\Api\Data\ApiInterface
+    * @return \ValidAge\Api\Api\Data\ApiInterface
     */
     public function easy_check($session_data);
     /**
@@ -102,6 +102,6 @@ interface ApiManagementInterface
     *
     * @param mixed $session_data
     *
-    * @return \XCode\Api\Api\Data\ApiInterface
+    * @return \ValidAge\Api\Api\Data\ApiInterface
     */
 }

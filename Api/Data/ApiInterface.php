@@ -1,15 +1,15 @@
 <?php
 /**
- * XCode Software.
+ * ValidAge Software.
  *
- * @category  XCode
+ * @category  ValidAge
  *
- * @author    XCode
- * @copyright Copyright (c) 2010-2016 XCode Software Private Limited (https://XCode.com)
- * @license   https://store.XCode.com/license.html
+ * @author    ValidAge
+ * @copyright Copyright (c) 2010-2016 ValidAge Software Private Limited (https://ValidAge.com)
+ * @license   https://store.ValidAge.com/license.html
  */
 
-namespace XCode\Api\Api\Data;
+namespace ValidAge\Api\Api\Data;
 
 /**
  * Marketplace product interface.
@@ -40,7 +40,7 @@ interface ApiInterface
      *
      * @param int $id
      *
-     * @return \XCode\Marketplace\Api\Data\ProductInterface
+     * @return \ValidAge\Marketplace\Api\Data\ProductInterface
      */
     public function setId($id);
 
@@ -56,7 +56,7 @@ interface ApiInterface
      *
      * @param string $title
      *
-     * @return \XCode\Marketplace\Api\Data\ProductInterface
+     * @return \ValidAge\Marketplace\Api\Data\ProductInterface
      */
     public function setTitle($title);
 
@@ -72,7 +72,7 @@ interface ApiInterface
      *
      * @param string $desc
      *
-     * @return \XCode\Marketplace\Api\Data\ProductInterface
+     * @return \ValidAge\Marketplace\Api\Data\ProductInterface
      */
     public function setDescription($desc);
 }

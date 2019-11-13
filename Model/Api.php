@@ -1,10 +1,10 @@
 <?php
 
-namespace XCode\Api\Model;
+namespace ValidAge\Api\Model;
 
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
-use \XCode\Api\Helper\Data;
+use \ValidAge\Api\Helper\Data;
 use \Magento\Framework\App\Filesystem\DirectoryList;
 use \Magento\Framework\Stdlib\CookieManagerInterface;
 use \Magento\Framework\Controller\ResultFactory;
@@ -12,10 +12,10 @@ use \Magento\Framework\Controller\ResultFactory;
 /**
  * Marketplace Product Model.
  *
- * @method \XCode\Marketplace\Model\ResourceModel\Product _getResource()
- * @method \XCode\Marketplace\Model\ResourceModel\Product getResource()
+ * @method \ValidAge\Marketplace\Model\ResourceModel\Product _getResource()
+ * @method \ValidAge\Marketplace\Model\ResourceModel\Product getResource()
  */
-class Api implements \XCode\Api\Api\Data\ApiInterface
+class Api implements \ValidAge\Api\Api\Data\ApiInterface
 {
     protected $_resultFactory;
     protected $_cookieManager;
@@ -59,7 +59,7 @@ class Api implements \XCode\Api\Api\Data\ApiInterface
      *
      * @param int $id
      *
-     * @return \XCode\Marketplace\Api\Data\ProductInterface
+     * @return \ValidAge\Marketplace\Api\Data\ProductInterface
      */
     public function setId($id)
     {
@@ -80,7 +80,7 @@ class Api implements \XCode\Api\Api\Data\ApiInterface
      *
      * @param string $title
      *
-     * @return \XCode\Marketplace\Api\Data\ProductInterface
+     * @return \ValidAge\Marketplace\Api\Data\ProductInterface
      */
     public function setTitle($title)
     {
@@ -101,7 +101,7 @@ class Api implements \XCode\Api\Api\Data\ApiInterface
      *
      * @param string $desc
      *
-     * @return \XCode\Marketplace\Api\Data\ProductInterface
+     * @return \ValidAge\Marketplace\Api\Data\ProductInterface
      */
     public function setDescription($desc)
     {
@@ -280,7 +280,7 @@ class Api implements \XCode\Api\Api\Data\ApiInterface
         $key = $this->helper->ageverification_publicKey();
         $secretKey = $this->helper->ageverification_secretKey();
         $session_data["website_key"]= $key;
-             $url = 'http://192.168.222.241/cya/public/api/changestate';
+             $url = 'https://cloud.validage.com/person/changestate';
             
             $authorization = "Authorization: Bearer ".$secretKey;
 
@@ -300,7 +300,7 @@ class Api implements \XCode\Api\Api\Data\ApiInterface
         $key = $this->helper->ageverification_publicKey();
         $secretKey = $this->helper->ageverification_secretKey();
         $session_data["website_key"]= $key;
-             $url = 'http://192.168.222.241/cya/public/api/easycheck';
+             $url = 'https://cloud.validage.com/person/easycheck_magento2';
             
             $authorization = "Authorization: Bearer ".$secretKey;
 

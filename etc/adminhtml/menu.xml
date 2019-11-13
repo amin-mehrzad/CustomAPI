@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <!-- <add id="XCode_ScheduledImport::xcode" title="XCODE" module="XCode_AgeVerificationCheckout" sortOrder="40" resource="XCode_ScheduledImport::xcode"/> -->
-        <add id="XCode_Api::xcode_api" title="Age Verification Easy Checkout" module="XCode_Api" sortOrder="20"   parent="XCode_ScheduledImport::xcode" resource="XCode_Api::xcode_ageverificationcheckout"/>
-        <!-- <add id="XCode_ScheduledImport::scheduledimport_Logs" title="Logs and Status" module="XCode_ScheduledImport" sortOrder="99" parent="XCode_ScheduledImport::xcode_scheduledimport"  dependsOnModule="XCode_ScheduledImport" resource="XCode_ScheduledImport::scheduledimport_Logs" action="scheduledimport/Logs"/> -->
-        <add id="XCode_Api::xcode_Ageconfiguration" title="Configuration" module="XCode_Api" sortOrder="99" parent="XCode_Api::xcode_api"  resource="XCode_ScheduledImport::xcode_configuration"  action="adminhtml/system_config/edit/section/ageverification_tab"/>
-        <!-- <add id="XCode_AgeVerificationCheckout::configuration_setting" title="Setting" module="XCode_ScheduledImport" sortOrder="99" parent="XCode_ScheduledImport::xcode_configuration"  resource="XCode_ScheduledImport::configuration_setting" action="adminhtml/system_config/edit/section/scheduledImport_tab"/> -->
+        <!-- <add id="ValidAge_ScheduledImport::validage" title="VALIDAGE" module="ValidAge_AgeVerificationCheckout" sortOrder="40" resource="ValidAge_ScheduledImport::validage"/> -->
+        <add id="ValidAge_Api::validage_api" title="Age Verification Easy Checkout" module="ValidAge_Api" sortOrder="20"   parent="ValidAge_AgeVerificationPopup::validage" resource="ValidAge_Api::validage_api"/>
+        <!-- <add id="ValidAge_ScheduledImport::scheduledimport_Logs" title="Logs and Status" module="ValidAge_ScheduledImport" sortOrder="99" parent="ValidAge_ScheduledImport::validage_scheduledimport"  dependsOnModule="ValidAge_ScheduledImport" resource="ValidAge_ScheduledImport::scheduledimport_Logs" action="scheduledimport/Logs"/> -->
+        <add id="ValidAge_Api::validage_Ageconfiguration" title="Configuration" module="ValidAge_Api" sortOrder="99" parent="ValidAge_Api::validage_api"  resource="ValidAge_ScheduledImport::validage_configuration"  action="adminhtml/system_config/edit/section/ageverification_tab"/>
+        <!-- <add id="ValidAge_AgeVerificationCheckout::configuration_setting" title="Setting" module="ValidAge_ScheduledImport" sortOrder="99" parent="ValidAge_ScheduledImport::validage_configuration"  resource="ValidAge_ScheduledImport::configuration_setting" action="adminhtml/system_config/edit/section/scheduledImport_tab"/> -->
     </menu>
 </config>

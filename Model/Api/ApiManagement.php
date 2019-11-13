@@ -1,8 +1,8 @@
 <?php
 
-namespace XCode\Api\Model\Api;
+namespace ValidAge\Api\Model\Api;
 use \Magento\Framework\Controller\ResultFactory;
-class ApiManagement implements \XCode\Api\Api\ApiManagementInterface
+class ApiManagement implements \ValidAge\Api\Api\ApiManagementInterface
 {
     const SEVERE_ERROR = 0;
     const SUCCESS = 1;
@@ -11,7 +11,7 @@ class ApiManagement implements \XCode\Api\Api\ApiManagementInterface
     protected $_ApiFactory;
 
     public function __construct(
-        \XCode\Api\Model\ApiFactory $ApiFactory,
+        \ValidAge\Api\Model\ApiFactory $ApiFactory,
         \Magento\Framework\Controller\ResultFactory $resultFactory
         
 
@@ -27,7 +27,7 @@ class ApiManagement implements \XCode\Api\Api\ApiManagementInterface
      *
      * @param mixed $session_data
      *
-     * @return \XCode\Api\Api\Data\ApiInterface
+     * @return \ValidAge\Api\Api\Data\ApiInterface
      */
     public function login($session_data)
     {
@@ -244,7 +244,7 @@ class ApiManagement implements \XCode\Api\Api\ApiManagementInterface
             $store_address = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_WEB);
             $origin_address = $_SERVER['REMOTE_ADDR'];
             if (strpos($store_address,$origin_address)>0){
-                return $model->changeStateAction($session_data);
+                return $model->easyCheckAction($session_data);
             }
             return "{'code':'401','Message':'Unauthorized Access. Your ip address will be reported to site administrator'}";
     }

@@ -1,24 +1,32 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <!-- <tab id="xcode" translate="label" sortOrder="180">
-            <label>XCode</label>
+        <!-- <tab id="validage" translate="label" sortOrder="180">
+            <label>ValidAge</label>
         </tab> -->
         <section id="ageverification_tab" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-            <label>Age Verification Checkout</label>
-            <tab>xcode</tab>
-            <resource>XCode_AgeVerificationCheckout::ageverificationcheckout_setting</resource>
+            <label>Age Verification Easy Checkout</label>
+            <tab>validage</tab>
+            <resource>ValidAge_Api::api_setting</resource>
             <group id="ageverification_setting" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
-                <label>Age Verification Checkout Settings</label>
+                <label>Age Verification Easy Checkout Settings</label>
                 <field id="ageverification_secretKey" translate="label comment" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Secret Key</label>
                     <validate>required-entry</validate>
-                    <comment></comment>
+                    <comment><![CDATA[
+                            <a href="https://validage.com" target="_blank">
+                                If you don't have a key click here  to register and get your key for FREE.
+                            </a>
+                        ]]></comment>
                 </field>
                 <field id="ageverification_publicKey" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Public Key</label>
                     <validate>required-entry</validate>
-                    <comment></comment>
+                    <comment><![CDATA[
+                            <a href="https://validage.com" target="_blank">
+                                If you don't have a key click here  to register and get your key for FREE.
+                            </a>
+                        ]]></comment>
                 </field>
             </group>
         </section>
